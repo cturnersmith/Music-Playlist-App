@@ -4,5 +4,5 @@ const ctrl = require('../controllers');
 
 router.get('/signup', ctrl.auth.renderSignup);
 
-
 module.exports = router;
+

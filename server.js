@@ -15,10 +15,6 @@ app.get('/', (req, res) => {
 })
 app.use('/auth', routes.auth);
 
-
-
-
-
 app.listen(process.env.PORT, () => {
     console.log('I am listening');
 })
