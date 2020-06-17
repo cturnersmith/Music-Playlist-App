@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
     res.render('index.ejs');
 })
 app.use('/auth', routes.auth);
+// app.use('/songs', routes.songs);
+// app.use('/profile', routes.profile);
+// app.use('/playlists', routes.playists);
+
+
 
 app.listen(process.env.PORT, () => {
     console.log('I am listening');

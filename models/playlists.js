@@ -2,8 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Playlists = sequelize.define('Playlists', {
     playlist_name: DataTypes.STRING,
-
-userid: DataTypes.INTEGER
+    userid: DataTypes.INTEGER
   }, {});
   Playlists.associate = function(models) {
     Playlists.belongsTo(models.Users, {foreignKey: 'userid'})
