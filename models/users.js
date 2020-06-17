@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     img: DataTypes.STRING
   }, {});
   Users.associate = function(models) {
+    Users.hasMany(models.Playlists, {foreignKey: 'userid'})
     // associations can be defined here
   };
   return Users;

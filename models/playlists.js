@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     id: DataTypes.INTEGER
   }, {});
   Playlists.associate = function(models) {
+    Playlists.belongsTo(models.Users, {foreignKey: 'userid'})
     Playlists.belongsToMany(models.Songs, {
       through: 'Songs_Playlists',
       foreignKey: 'playlistId',
