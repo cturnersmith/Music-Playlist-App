@@ -10,6 +10,13 @@ module.exports = {
         password: 'beyonce',
         email: 'jay@yahoo.com',
         img: 'https://townsquare.media/site/812/files/2017/11/jay-z.jpg?w=980&q=75'
+      },
+      {
+        name: 'Maro',
+        username: 'MarioL',
+        password: '123456',
+        email: 'mario@yahoo.com',
+        img: 'https://townsquare.media/site/812/files/2017/11/jay-z.jpg?w=980&q=75'
       }
     ])
     /*
