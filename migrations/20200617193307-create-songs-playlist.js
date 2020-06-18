@@ -26,6 +26,13 @@ module.exports = {
         defaultValue: new Date(),
         type: Sequelize.DATE
       }
+    },
+    {
+      uniqueKeys: {
+        actions_unique: {
+          fields: ['playlistId', 'songid']
+        }
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
