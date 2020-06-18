@@ -1,5 +1,5 @@
 module.exports = {
-    // users: require('./users'),
+    profile: require('./profile'),
     // songs: require('./songs.js'),
     auth: require('./auth')
     // playlists: require('./playlists')

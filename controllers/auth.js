@@ -22,7 +22,7 @@ const signup = (req, res) => {
 
             Users.create(req.body)
             .then(newUser => {
-                res.redirect(`/profile/${newUser.id}`);
+                res.redirect(`profile/${newUser.id}`);
             })
             .catch(err => {
                 res.render('signup.ejs', {
@@ -45,12 +45,11 @@ const login = (req, res) => {
     Users.findOne({
         where: {
             username:req.body.username,
-            email: req.body.email,
         }
     })
     .then(foundUser => {
         if(foundUser) {
-            bcrypt.compare(req.body.password, foundUser.password, foundUser.email, (err, match) => {
+            bcrypt.compare(req.body.password, foundUser.password, (err, match) => {
                 if (match) {
                     res.redirect(`/profile/${foundUser.id}`);
                 } else {
