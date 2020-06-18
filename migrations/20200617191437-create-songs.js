@@ -2,7 +2,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Songs', {
-      songid: {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
@@ -30,6 +30,9 @@ module.exports = {
         defaultValue: new Date(),
         type: Sequelize.DATE
       }
+      
+
+
     });
   },
   down: (queryInterface, Sequelize) => {
