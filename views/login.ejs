@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Sign</title>
+</head>
+    <body>
+        <div class= "Banner">Banner Placeholder</div> 
+
+        
+
+        <div class="userinput">
+            <h1> Existing user? You're in the right place</h1>
+
+            <form action='/auth/login' method="POST">
+                Username: <input type="text" name="username"/> <br>
+                Email <input type="email" name="email"/> <br>
+                Password: <input type="password" name="password"/> <br>
+                <input type="submit" value="login"/>
+            <h2><%=msg%></h2>
+            </form>
+
+
+        </div>    
+
+
+
+    </body>
+</html>
