@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.use('/auth', routes.auth);
 // app.use('/songs', routes.songs);
 app.use('/profile', routes.profile);
-// app.use('/playlists', routes.playists);
+app.use('/playlists', routes.playlists);
 
 
 

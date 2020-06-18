@@ -42,9 +42,17 @@ const deleteProfile = (req, res) => {
 
 }
 
+const createPlaylist = (req, res) => {
+    Playlists.create(req.body)
+    .then (newPlaylist => {
+        res.redirect(`/profile/${req.params.index}`)
+    });
+    }
+
 module.exports = {
     renderProfile,
     editProfile,
-    deleteProfile
+    deleteProfile,
+    createPlaylist
 
 }

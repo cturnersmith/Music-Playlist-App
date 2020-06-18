@@ -1,6 +1,6 @@
 module.exports = {
     profile: require('./profile'),
     // songs: require('./songs.js'),
-    auth: require('./auth')
-    // playlists: require('./playlists')
+    auth: require('./auth'),
+    playlists: require('./playlists')
 }
