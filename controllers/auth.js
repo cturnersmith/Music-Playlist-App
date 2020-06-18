@@ -1,13 +1,73 @@
+//Grab user models
 const Users = require('../models').Users;
-
+//Grab bcrypt 
 const bcrypt = require('bcryptjs');
 
+
+//Render signup screen
 const renderSignup = (req, res) => {
-    res.render('signup.ejs');
+    res.render('signup.ejs', {
+        msg: "Welcome to 'WEBSITE NAME'! Pick a username that helps you stand out! "
+    });
+}
+
+//Create new User
+const signup = (req, res) => {
+    bcrypt.genSalt(10, (err, salt) => {
+        if(err) return res.status(500).json(err);
+        
+        bcrypt.hash(req.body.password, salt, (err, hashedPWD) => {
+            if (err) return res.status(500).json(err);
+            req.body.password = hashedPWD;
+
+            Users.create(req.body)
+            .then(newUser => {
+                res.redirect(`/profile/${newUser.id}`);
+            })
+            .catch(err => {
+                res.render('signup.ejs', {
+                    msg: "It looks like something went wrong :( Try picking a new Username. If you already have an existing account with the chosen email, please continue to the log-in page"
+                });
+            })
+        });
+    });
+}
+
+//Render Log in page
+const renderLogIn = (req, res) => {
+    res.render('login.ejs', {
+        msg: "We're happy to have you back!"
+    })
+}
+
+//Log in
+const login = (req, res) => {
+    Users.findOne({
+        where: {
+            username:req.body.username,
+            email: req.body.email,
+        }
+    })
+    .then(foundUser => {
+        if(foundUser) {
+            bcrypt.compare(req.body.password, foundUser.password, foundUser.email, (err, match) => {
+                if (match) {
+                    res.redirect(`/profile/${foundUser.id}`);
+                } else {
+                    return res.sendStatus(400);    
+                }
+            })
+        }
+    })
 }
 
 
 
+
+//functions
 module.exports = {
-    renderSignup
+    renderSignup,
+    signup,
+    renderLogIn,
+    login, 
 }
