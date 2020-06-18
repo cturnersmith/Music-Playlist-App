@@ -50,7 +50,7 @@ const login = (req, res) => {
     })
     .then(foundUser => {
         if(foundUser) {
-            bcrypt.compare(req.body.password, foundUser.password, foundUser.email, (err, matchh) => {
+            bcrypt.compare(req.body.password, foundUser.password, foundUser.email, (err, match) => {
                 if (match) {
                     res.redirect(`/profile/${foundUser.id}`);
                 } else {
