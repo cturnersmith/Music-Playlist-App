@@ -7,13 +7,21 @@
 </head>
 <body>
     <div class= "Banner"> Banner Placeholder </div>
-
     <br>
-
     <h1>Current Songs in Playlist</h1>
-    <!-- <button class = "Signout">Signout</button> -->
-
-
-
+    <form action="/playlist" method="POST">
+        Song: <input type="text" name="Song" value="<%Users.song%>" />//decide what these should be named
+        Artist: <input type="text" name="Artist" value = "<%%>" />
+        Album: <input type="text" name="Album" value="<%Album.%>"/>
+        Video: <input type="text" name="Video" value="<%%>" />
+        <br> </br>
+        <input type="submit" value="Add Song" />
+    </form>
+    <br> </br>
+    <h2>Songs added by you:</h2>
+    <% for(let i=0; i<users.Songs.length; i++) { %>
+        <a href ="/songs/<%=users.Songs[i].id%>"><%=users.Songs[i].name%></a>
+        <br>
+    <% } %> -->
 </body>
 </html>
