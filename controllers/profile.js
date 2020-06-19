@@ -43,6 +43,7 @@ const deleteProfile = (req, res) => {
 }
 
 const createPlaylist = (req, res) => {
+    req.body.userid = req.params.index
     Playlists.create(req.body)
     .then (newPlaylist => {
         res.redirect(`/profile/${req.params.index}`)

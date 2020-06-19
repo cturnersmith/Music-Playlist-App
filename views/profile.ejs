@@ -27,7 +27,7 @@
 
             <h3>Your Current Playlist:</h3>
             <% for(let i=0; i<users.Playlists.length; i++) { %>
-                <a href="/"> <%=users.Playlists[i].playlist_name%> </a>
+                <a href="/playlists/<%=users.Playlists[i].id%>"> <%=users.Playlists[i].playlist_name%> </a>
                
                 <br>
             <% } %>
@@ -36,8 +36,7 @@
 <div class="CreatePlaylist">
     <h4> Playlists: </h4>
 
-    <form action="/profile/<%=users.id%>" method="POST">
-        <div class="hideId">User Id: <input type="text" name= "userid" value=<%=users.id%> /></div>
+    <form action="/profile/<%=users.id%>" method="POST">     
         Playlist Name: <input type="text" name= "playlist_name" />
         <input type="submit" value="Create Playlist" />
     </form>
