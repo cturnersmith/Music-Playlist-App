@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 //Render signup screen
 const renderSignup = (req, res) => {
     res.render('signup.ejs', {
-        msg: "Welcome to 'WEBSITE NAME'! Pick a username that helps you stand out! "
+        msg: "Pick a username that lets you stand out! "
     });
 }
 

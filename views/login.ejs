@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Sign</title>
 </head>
@@ -15,9 +16,9 @@
             <h1> Existing user? You're in the right place</h1>
 
             <form action='/auth/login' method="POST">
-                Username: <input type="text" name="username"/> <br>
-                Password: <input type="password" name="password"/> <br>
-                <input type="submit" value="login"/>
+                <input class="singleinput" type="text" placeholder="Username"/> <br>
+                <input class="singleinput" type="password" placeholder="Password" name="password"/> <br>
+                <input class="singleinput"type="submit" value="login"/>
             <h2><%=msg%></h2>
 
             <a href="/auth/signup">New to the site?</a>
