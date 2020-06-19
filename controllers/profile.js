@@ -3,6 +3,7 @@ const Playlists = require('../models').Playlists;
 
 
 const renderProfile = (req, res) => {
+    console.log(req.params.index);
     Users.findByPk(req.params.index, {
         include: [
              Playlists
@@ -11,7 +12,6 @@ const renderProfile = (req, res) => {
    
     
     .then(userProfile=> {
-        console.log(userProfile);
         res.render('profile.ejs', {
             users: userProfile
         })

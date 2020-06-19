@@ -2,14 +2,12 @@ const Users = require('../models').Users;
 const Playlists = require('../models').Playlists;
 const Songs = require('../models').Songs;
 
-// const renderPlaylist = (req, res) => {
-//     res.render('playlists.ejs');
 
-// }
 
 const showPlaylist = (req, res) => {
     Playlists.findByPk(req.params.index, {
-        include: [{model: Users},{model: Songs}], 
+        include: [{model: Users},
+          {model: Songs}], 
     })
         .then(foundPlaylists => {
             res.render('playlists.ejs', {
@@ -34,16 +32,20 @@ const showSongs = (req, res) => {
     })
   }
 
-// const showSongs = (req, res) => {
-//     req.body.id = req.params.index
-//     Songs.create(req.body)
-//     .then(newSong => {
-//         res.redirect(`/playlists/${req.params.index}`)
-//     })
+  const deleteSong = (req, res) => {
+    Songs.destroy({
+      where: {
+        id: req.params.index
+      }
+  })	
+}
 
-// }
+
+
 
 module.exports = {
     showPlaylist,
-    showSongs
+    showSongs,
+    deleteSong,
+    
 }
