@@ -4,4 +4,5 @@ const ctrl = require('../controllers');
 
 router.get('/playlists', ctrl.playlists.renderPlaylist);
 
+
 module.exports = router;

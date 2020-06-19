@@ -7,6 +7,6 @@ const renderPlaylist = (req, res) => {
 
 }
 
-module.export = {
+module.exports = {
     renderPlaylist
 }
