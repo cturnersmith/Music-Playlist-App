@@ -11,6 +11,8 @@ html {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    font-family: 'Noto Sans HK', sans-serif;
+
   }
   
   ol, ul {
@@ -27,7 +29,9 @@ html {
       background-image: url("https://images.pexels.com/photos/1616470/pexels-photo-1616470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
       background-size: cover;
       overflow: hidden;
-    
+      height: 100vh;
+      width: 100vw;
+      font-family: ;
   }
 
 .userinput {
@@ -43,14 +47,14 @@ html {
       text-align: center;
   }
 
-.userinput h1, h3{
+.userinput h1, h2{
       text-align: center;
       margin: 0 0 30px;
       padding: 0;
-      color: white;
+      color: azure;
   }
 .userinput a:link {
-    color: white;
+    color: azure;
     font-size: x-large;
 }
 
@@ -75,4 +79,88 @@ html {
     margin:2px;
     padding: 5px;
     font-size: 17px;;
+}
+.userPicture {
+  height: 250px;
+  width: 250px;
+  border-radius: 150px;
+  border: black 1px solid;
+  margin:5px 15px;
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+
+}
+
+.userInfoBox {
+  margin: 10px;
+  color:azure;
+  width: 350px;
+  background: rgba(0,0,0,.8);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+
+.userInfoBox h1 {
+  margin-bottom:15px;
+  text-align: center;
+}
+
+.userInfo {
+  font-size: larger;
+  margin:10px;
+  width: 100%;
+}
+
+.editButtons {
+ display: flex;
+ margin:0 50px;
+ justify-content: space-between;
+}
+
+.currentPlaylist {
+  position: fixed;
+  margin-top: 50px;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -35%);
+      width: 425px;
+      background: rgba(0,0,0,.9);
+      box-shadow: 0 15px 25px rgba(0,0,0,.8);
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: large;
+}
+
+.currentPlaylist h2 {
+  color: azure;
+  margin-bottom: 25px;
+}
+
+.currentPlaylist a:link{
+  color: azure;
+  text-decoration: none;
+}
+.currentPlaylist a:visited{
+  color: azure;
+  text-decoration: none;
+}
+.currentPlaylist a:hover{
+  color: azure;
+  text-decoration: none;
+}
+
+.createPlaylist {
+      font-size: larger;
+      position: fixed;
+      top: 35%;
+      left: 78%;
+      width: 275px;
+      background: rgba(0,0,0,.8);
+      box-shadow: 0 15px 25px rgba(0,0,0,.8);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      color: azure;
 }
