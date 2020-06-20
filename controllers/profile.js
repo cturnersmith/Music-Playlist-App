@@ -50,10 +50,10 @@ const createPlaylist = (req, res) => {
     });
     }
 
+
 module.exports = {
     renderProfile,
     editProfile,
     deleteProfile,
-    createPlaylist
-
+    createPlaylist,
 }

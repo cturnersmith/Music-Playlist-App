@@ -7,9 +7,8 @@
     <title>User Playlist</title>
 </head>
     <body>
-        <div class= "Banner"> Banner Placeholder 
-            <a href="/">Sign out</a>
-            
+        <div class= "banner">
+            <a href="/"><img src="https://www.flaticon.com/premium-icon/icons/svg/61/61972.svg" width="60px" height="60px"> </a>
         </div>
         
         <div clas="currentPlaylist">
@@ -25,14 +24,14 @@
                 </li>
                Youtube: <a href="<%=playlists.Songs[i].video%>" target="_blank">Here!</a> <br>
                
-               <form action="/playlists/<%=playlists.Songs[i].id%>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete"/>
-                </form>
-
 
                <% } %>
             </ul>
         </div>
+
+        <form action="/playlists/<%=playlists.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Playlist" />
+        </form>
 
         <div class="addSongBox">   
         <form action="/playlists/<%=playlists.id%>" method="POST">

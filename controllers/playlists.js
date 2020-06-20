@@ -32,20 +32,29 @@ const showSongs = (req, res) => {
     })
   }
 
-  const deleteSong = (req, res) => {
-    Songs.destroy({
+//   const deleteSong = (req, res) => {
+//     Songs.destroy({
+//       where: {
+//         id: req.params.index
+//       }
+//   })	
+// }
+
+const deletePlaylist = (req, res) => {
+  Playlists.destroy({
       where: {
-        id: req.params.index
+         id: req.params.index
       }
-  })	
-}
-
-
+  })
+  .then(() => {
+      res.redirect('/');
+})
+}   
 
 
 module.exports = {
     showPlaylist,
     showSongs,
-    deleteSong,
+    deletePlaylist,
     
 }

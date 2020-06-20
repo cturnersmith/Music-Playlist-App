@@ -8,8 +8,8 @@
     <title>User Profile</title>
 </head>
         <body>
-            <div class= "Banner"> Banner Placeholder 
-                <a href="/">Sign out</a>
+            <div class= "banner">
+                <a href="/"><img src="https://www.flaticon.com/premium-icon/icons/svg/61/61972.svg" width="60px" height="60px"> </a>
             </div>
             
             <img class="userPicture" src=<%=users.img%>>
@@ -27,24 +27,27 @@
                         Email: <input type="email" name="email" value= <%=users.email%> /><br>
                         Profile Picture: <input type="text" name="img" /><br> <br>
                     
-                    <div class="editButtons">    
+                        
                         <input type="submit" value="Edit Profile" /> <br>
+                    </form>
                         <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
                             <input type="submit" value="Delete Profile" />
                         </form>
-                    </div>    
-                    </form>
+                    
                 </div>
-            </div>
+             </div>    
+                   
 
            
             <div class = "currentPlaylist">
 
                 <h2>Your Current Playlists:</h2>
                 <% for(let i=0; i<users.Playlists.length; i++) { %>
-                    <a href="/playlists/<%=users.Playlists[i].id%>"> <%=users.Playlists[i].playlist_name%> </a>
-                
+                    <a href="/playlists/<%=users.Playlists[i].id%>"> <%=users.Playlists[i].playlist_name%> </a>       
                     <br>
+                    <form action="/playlists/<%=users.Playlists[i].id%>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete"/>
+                    </form>
                 <% } %>
              </div>
 

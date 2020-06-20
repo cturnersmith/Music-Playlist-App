@@ -24,6 +24,11 @@ html {
     height: auto;
   }
   
+  .banner {
+      position: fixed;
+      left: 95%;
+      margin: 10px;
+  }
 
   body {
       background-image: url("https://images.pexels.com/photos/1616470/pexels-photo-1616470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
