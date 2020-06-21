@@ -36,7 +36,6 @@ html {
       overflow: hidden;
       height: 100vh;
       width: 100vw;
-      font-family: ;
   }
 
 .userinput {
@@ -98,7 +97,7 @@ html {
 .userInfoBox {
   margin: 10px;
   color:azure;
-  width: 350px;
+  width: 25vw;
   background: rgba(0,0,0,.8);
   box-shadow: 0 15px 25px rgba(0,0,0,.8);
   padding: 5px;
@@ -125,17 +124,17 @@ html {
 
 .currentPlaylist {
   position: fixed;
-  margin-top: 50px;
-      top: 35%;
-      left: 50%;
-      transform: translate(-50%, -35%);
-      width: 425px;
-      background: rgba(0,0,0,.9);
-      box-shadow: 0 15px 25px rgba(0,0,0,.8);
-      padding: 40px;
-      border-radius: 10px;
-      text-align: center;
-      font-size: large;
+  height: 75vh;
+  width: 40vw;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  background: rgba(0,0,0,.8);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .currentPlaylist h2 {
@@ -152,7 +151,7 @@ html {
   text-decoration: none;
 }
 .currentPlaylist a:hover{
-  color: azure;
+  color: lightpink;
   text-decoration: none;
 }
 
@@ -160,7 +159,7 @@ html {
       font-size: larger;
       position: fixed;
       top: 35%;
-      left: 78%;
+      left: 77vw;
       width: 275px;
       background: rgba(0,0,0,.8);
       box-shadow: 0 15px 25px rgba(0,0,0,.8);
@@ -169,3 +168,80 @@ html {
       text-align: center;
       color: azure;
 }
+
+.today {
+    position: fixed;
+    left:50%;
+    top:1%;
+    transform: translate(-50%);
+    width: 65vw;
+    height: 20vh;
+    background: rgba(0,0,0,.9);
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+    color: azure;
+    overflow: hidden;
+}
+
+
+.addSongBox {
+  position: fixed;
+  left:55px;
+  top: 85%;
+  width: 90vw;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 10px;
+  border-radius: 10px;
+  color: azure;
+  text-align: center;
+}
+
+.action {
+  position:fixed;
+  left: 5%;
+  top: 25%;
+  width: 40vw;
+  height: 55vh;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 10px;
+  border-radius: 10px;
+  color: azure;
+  overflow: scroll;
+  overflow-x: hidden
+  
+}
+
+.allSongs {
+  position:fixed;
+  left: 55%;
+  top: 25%;
+  width: 40vw;
+  height: 55vh;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 10px;
+  border-radius: 10px;
+  color: azure;
+  overflow: scroll;
+  overflow-x: hidden
+}
+
+.playPicture {
+    height:125px;
+    width: 125px;
+    margin: 5px 10px;
+    border-radius: 150px;
+    border: black 1px solid;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  
+  }
+  .indivSong {
+    border-bottom: azure 1px solid;
+    border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  }
