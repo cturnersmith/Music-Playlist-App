@@ -10,8 +10,14 @@ const showPlaylist = (req, res) => {
           {model: Songs}], 
     })
         .then(foundPlaylists => {
+          Songs.findAll()
+          .then(allSongs => {
+
+          
             res.render('playlists.ejs', {
-                playlists: foundPlaylists
+                playlists: foundPlaylists,
+                songs: allSongs
+              });
             })
         })
 }
@@ -43,18 +49,42 @@ const showSongs = (req, res) => {
 const deletePlaylist = (req, res) => {
   Playlists.destroy({
       where: {
-         id: req.params.index
+        id: req.params.index
+         
       }
   })
   .then(() => {
       res.redirect('/');
+      
+      // res.redirect("/profile/5"); // this is the change I made if it doesn't work
+     
+
 })
-}   
+} 
+
+const addSong = (req, res) => {
+  Playlists.update(req.body, {
+      where: {id: req.params.id},
+      returning: true
+  })
+  .then(updatedPlaylist => {
+      Songs.findByPk(req.body.id)
+      .then(foundSong => {
+          Playlists.findByPk(req.params.id)
+          .then(foundPlaylist => {
+              foundPlaylist.setSongs(foundSong);
+              res.redirect(`/playlists/${req.params.index}`);
+          })
+      })
+  })
+}
+
 
 
 module.exports = {
     showPlaylist,
     showSongs,
     deletePlaylist,
+    addSong
     
 }

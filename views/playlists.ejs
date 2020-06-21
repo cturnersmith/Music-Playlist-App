@@ -42,6 +42,16 @@
             <input type="submit" value="Add Song" />
         </form>
         </div> 
+      
+        <% for(let i=0; i<songs.length; i++) { %>
+            Song: <%=songs[i].name%> <br>
+           Artist: <%=songs[i].artist%> 
+           Album: <%=songs[i].album%> <br>
+           <form action="/playlists/<%=playlists.id%>?_method=PUT" method="POST">
+                <input type="submit" value="Add Song to current Playlist" />
+        </form> 
+        <% } %>
         
+ 
     </body>
     </html>
