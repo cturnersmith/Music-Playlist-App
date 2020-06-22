@@ -23,15 +23,16 @@
 
                         Name: <input type="text" name="name" value=<%=users.name%> /><br>
                         Username: <input type="text" name="username" value=<%=users.username%> /> <br>
-                        Password: <input type="password" name="password" /><br>
+                        Password: <input type="password" name="password"value = <%=users.password%> disabled /><br>
                         Email: <input type="email" name="email" value= <%=users.email%> /><br>
-                        Profile Picture: <input type="text" name="img" /><br> <br>
+                        Profile Picture:  <input type="text" placeholder = "Picture URL(under 250 char.)" name="img" /><br> <br>
+                        
                     
                         
-                        <input type="submit" value="Edit Profile" /> <br>
+                        <input class = "button" type="submit" value="Edit Profile" /> <br>
                     </form>
                         <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
-                            <input type="submit" value="Delete Profile" />
+                            <input class = "button" type="submit" value="Delete Profile" />
                         </form>
                     
                 </div>

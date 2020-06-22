@@ -19,7 +19,6 @@ const signup = (req, res) => {
         bcrypt.hash(req.body.password, salt, (err, hashedPWD) => {
             if (err) return res.status(500).json(err);
             req.body.password = hashedPWD;
-
             Users.create(req.body)
             .then(newUser => {
                 res.redirect(`profile/${newUser.id}`);
