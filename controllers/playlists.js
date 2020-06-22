@@ -49,17 +49,13 @@ const showSongs = (req, res) => {
 const deletePlaylist = (req, res) => {
   Playlists.destroy({
       where: {
-        id: req.params.index
-         
+        id: req.params.index,
       }
   })
-  .then(() => {
-      res.redirect('/');
-      
-      // res.redirect("/profile/5"); // this is the change I made if it doesn't work
-     
-
-})
+  
+  // .then(() => {
+  //     res.redirect(`/profile/${req.params.index}`);
+  // })
 } 
 
 const addSong = (req, res) => {
