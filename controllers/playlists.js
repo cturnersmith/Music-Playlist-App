@@ -53,13 +53,6 @@ const deletePlaylist = (req, res) => {
          
       }
   })
-  .then(() => {
-      res.redirect('/');
-      
-      // res.redirect("/profile/5"); // this is the change I made if it doesn't work
-     
-
-})
 } 
 
 const addSong = (req, res) => {
