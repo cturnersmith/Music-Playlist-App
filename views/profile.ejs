@@ -43,9 +43,9 @@
 
                 <h2>Your Current Playlists:</h2>
                 <% for(let i=0; i<users.Playlists.length; i++) { %>
-                    <a href="/playlists/<%=users.Playlists[i].id%>"> <%=users.Playlists[i].playlist_name%> </a>       
+                    <a href="/playlists/<%=users.id%>/<%=users.Playlists[i].id%>"> <%=users.Playlists[i].playlist_name%> </a>       
                     <br>
-                <form onsubmit="setTimeout(function(){window.location.reload(); },10)" action="/playlists/<%=users.Playlists[i].id%>?_method=DELETE" method="POST">
+                <form action="/playlists/<%=users.id%>/<%=users.Playlists[i].id%>?_method=DELETE" method="POST">
                         <input type="submit" value="Delete"/>
                     </form>
                 <% } %>
