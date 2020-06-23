@@ -253,3 +253,11 @@ html {
     color:white;
     outline: black;
   }
+
+  .buttonPlaylist {
+    background-color: #993e3e93;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    outline: black;
+  }
