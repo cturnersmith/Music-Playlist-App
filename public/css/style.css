@@ -261,3 +261,10 @@ html {
     color:white;
     outline: black;
   }
+
+.title {
+  font-size:50px;
+  color: #993e3e93;
+  font-family: 'Fontdiner Swanky', cursive;
+
+}
