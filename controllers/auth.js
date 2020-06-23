@@ -1,21 +1,18 @@
-//Grab user models
+
 const Users = require('../models').Users;
-//Grab bcrypt 
 const bcrypt = require('bcryptjs');
 
 
-//Render signup screen
 const renderSignup = (req, res) => {
     res.render('signup.ejs', {
         msg: "Pick a username that lets you stand out! "
     });
 }
 
-//Create new User
+
 const signup = (req, res) => {
     bcrypt.genSalt(10, (err, salt) => {
         if(err) return res.status(500).json(err);
-        
         bcrypt.hash(req.body.password, salt, (err, hashedPWD) => {
             if (err) return res.status(500).json(err);
             req.body.password = hashedPWD;
@@ -32,14 +29,14 @@ const signup = (req, res) => {
     });
 }
 
-//Render Log in page
+
 const renderLogIn = (req, res) => {
     res.render('login.ejs', {
         msg: "We're happy to have you back!"
     })
 }
 
-//Log in
+
 const login = (req, res) => {
     Users.findOne({
         where: {

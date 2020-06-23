@@ -6,11 +6,9 @@ const renderProfile = (req, res) => {
     console.log(req.params.index);
     Users.findByPk(req.params.index, {
         include: [
-             Playlists
+            Playlists
         ]
     })
-   
-    
     .then(userProfile=> {
         res.render('profile.ejs', {
             users: userProfile
@@ -39,7 +37,6 @@ const deleteProfile = (req, res) => {
     .then(() => {
         res.redirect('/');
     })
-
 }
 
 const createPlaylist = (req, res) => {
@@ -48,7 +45,7 @@ const createPlaylist = (req, res) => {
     .then (newPlaylist => {
         res.redirect(`/profile/${req.params.index}`)
     });
-    }
+}
 
 
 module.exports = {

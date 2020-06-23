@@ -5,9 +5,6 @@ module.exports = (sequelize, DataTypes) => {
     songid: DataTypes.INTEGER
   }, {});
   Songs_Playlist.associate = function(models) {
-    
-
-    // associations can be defined here
   };
   return Songs_Playlist;
 };

@@ -29,69 +29,79 @@ html {
       left: 95%;
       margin: 10px;
   }
+.title {
+  font-size:50px;
+  color: azure;
+  font-family: 'Fontdiner Swanky', cursive;
+  text-align: center;
+  margin-top:5%;
+}
 
-  body {
-      background-image: url("https://images.pexels.com/photos/1616470/pexels-photo-1616470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-      background-size: cover;
-      overflow: hidden;
-      height: 100vh;
-      width: 100vw;
-  }
+body {
+  background-image: url("https://images.pexels.com/photos/1616470/pexels-photo-1616470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
 
 .userinput {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 400px;
-      background: rgba(0,0,0,.8);
-      box-shadow: 0 15px 25px rgba(0,0,0,.8);
-      padding: 40px;
-      border-radius: 10px;
-      text-align: center;
-  }
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: rgba(0,0,0,.8);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 35px;
+  border-radius: 10px;
+  text-align: center;
+  color: azure;
+}
 
 .userinput h1, h2{
-      text-align: center;
-      margin: 0 0 30px;
-      padding: 0;
-      color: azure;
-  }
+  text-align: center;
+  margin: 0 0 30px;
+  padding: 0;
+  color: azure;
+}
+
 .userinput a:link {
-    color: azure;
-    font-size: x-large;
+  color: azure;
+  font-size: x-large;
 }
 
 .userinput a:visited {
-    color: thistle;
-    font-size: x-large;
+  color: thistle;
+  font-size: x-large;
 }
 
 .userinput a:hover {
-    color: violet;
+  color: violet;
 }
 
 .welcomebuttons {
-    position:relative;
-    width: 100%;
-    padding: 10px 0;
+  position:relative;
+  width: 100%;
+  padding: 10px 0;
 }
 
 .singleinput {
-    width: 75%;
-    height:30px;
-    margin:2px;
-    padding: 5px;
-    font-size: 17px;;
+  width: 75%;
+  height:30px;
+  margin:2px;
+  padding: 5px;
+  font-size: 17px;;
 }
+
 .userPicture {
   height: 250px;
   width: 250px;
   border-radius: 150px;
   border: black 1px solid;
-  margin:15px 112px;
+  margin:15px;
+  left: 10%;
   box-shadow: 0 15px 25px rgba(0,0,0,.8);
-
 }
 
 .userInfoBox {
@@ -102,7 +112,6 @@ html {
   box-shadow: 0 15px 25px rgba(0,0,0,.8);
   padding: 5px;
   border-radius: 10px;
-  
 }
 
 .userInfoBox h1 {
@@ -117,16 +126,16 @@ html {
 }
 
 .editButtons {
- display: flex;
- margin:0 50px;
- justify-content: space-between;
+  display: flex;
+  margin:0 50px;
+  justify-content: space-between;
 }
 
 .currentPlaylist {
   position: fixed;
   height: 75vh;
   width: 35vw;
-  top: 50%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -35%);
   background: rgba(0,0,0,.8);
@@ -150,40 +159,41 @@ html {
   color: azure;
   text-decoration: none;
 }
+
 .currentPlaylist a:hover{
   color: lightpink;
   text-decoration: none;
 }
 
 .createPlaylist {
-      font-size: larger;
-      position: fixed;
-      top: 35%;
-      left: 77vw;
-      width: 275px;
-      background: rgba(0,0,0,.8);
-      box-shadow: 0 15px 25px rgba(0,0,0,.8);
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      color: azure;
+  font-size: larger;
+  position: fixed;
+  top: 35%;
+  left: 77vw;
+  width: 275px;
+  background: rgba(0,0,0,.8);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: azure;
 }
 
 .today {
-    position: fixed;
-    left:50%;
-    top:1%;
-    transform: translate(-50%);
-    width: 65vw;
-    height: 20vh;
-    background: rgba(0,0,0,.9);
-    box-shadow: 0 15px 25px rgba(0,0,0,.8);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: large;
-    color: azure;
-    overflow: hidden;
+  position: fixed;
+  left:50%;
+  top:1%;
+  transform: translate(-50%);
+  width: 65vw;
+  height: 20vh;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+  color: azure;
+  overflow: hidden;
 }
 
 
@@ -232,32 +242,32 @@ html {
 }
 
 .playPicture {
-    height:125px;
-    width: 125px;
-    margin: 5px 10px;
-    border-radius: 150px;
-    border: black 1px solid;
-    box-shadow: 0 15px 25px rgba(0,0,0,.8);
-  
-  }
-  .indivSong {
-    border-bottom: azure 1px solid;
-    border-radius: 10px;
-  box-shadow: 0 15px 25px rgba(0,0,0,.8);
-  }
+  height:125px;
+  width: 125px;
+  margin: 5px 10px;
+  border-radius: 150px;
+  border: black 1px solid;
+  box-shadow: 0 15px 25px rgba(0,0,0,.8); 
+}
 
-  .button {
-    background-color: #993e3e93;
-    font-size: 20px;
-    font-weight: bold;
-    color:white;
-    outline: black;
-  }
+.indivSong {
+  border-bottom: azure 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0,0,0,.8);  
+}
 
-  .buttonPlaylist {
-    background-color: #993e3e93;
-    font-size: 20px;
-    font-weight: bold;
-    color:white;
-    outline: black;
-  }
+.button {
+  background-color: #993e3e93;
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+  outline: black;
+}
+
+.buttonPlaylist {
+  background-color: #993e3e93;
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+  outline: black;
+}

@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'playlistId',
       otherKey: 'songid'
     })
-    // associations can be defined here
   };
   return Playlists;
 };
